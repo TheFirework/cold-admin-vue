@@ -1,15 +1,12 @@
-
-
 <template>
-  <AppConfigProvider>
-    <RouterView />
-    <a-button type="primary">Primary Button</a-button>
+  <div>Analysis</div>
+  <a-button type="primary">Primary Button</a-button>
   <a-button>Default Button</a-button>
   <a-button type="dashed">Dashed Button</a-button>
   <a-button type="text">Text Button</a-button>
   <a-button type="link">Link Button</a-button>
-  </AppConfigProvider>
 </template>
 
-<script setup lang="ts">
-</script>
+<script setup lang="ts"></script>
+
+<style scoped></style>

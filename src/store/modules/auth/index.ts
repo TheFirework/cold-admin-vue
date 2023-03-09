@@ -1,5 +1,4 @@
-
-import { defineStore } from 'pinia';
+import { defineStore } from "pinia";
 
 interface AuthState {
   /** 用户信息 */
@@ -10,17 +9,17 @@ interface AuthState {
   loginLoading: boolean;
 }
 
-export const useAuthStore = defineStore('auth-store', {
+export const useAuthStore = defineStore("auth-store", {
   state: (): AuthState => ({
     userInfo: {},
-    token: '',
-    loginLoading: false
+    token: "",
+    loginLoading: false,
   }),
   getters: {
     /** 是否登录 */
     isLogin(state) {
       return Boolean(state.token);
-    }
+    },
   },
   actions: {
     /**
@@ -36,5 +35,5 @@ export const useAuthStore = defineStore('auth-store', {
       // }
       this.loginLoading = false;
     },
-  }
+  },
 });

@@ -4,6 +4,7 @@ import Components from 'unplugin-vue-components/vite'
 import { AntDesignVueResolver } from 'unplugin-vue-components/resolvers'
 import AutoImport from 'unplugin-auto-import/vite'
 import { configMockPlugin } from './mock'
+import { configHtmlPlugin } from './html'
 
 export function createVitePlugins(viteEnv: ViteEnv, isBuild: boolean) {
   const { VITE_USE_MOCK } = viteEnv
@@ -21,6 +22,8 @@ export function createVitePlugins(viteEnv: ViteEnv, isBuild: boolean) {
       resolvers: [AntDesignVueResolver({ importStyle: 'less', resolveIcons: true })]
     })
   ]
+
+  plugins.push(configHtmlPlugin(viteEnv, isBuild))
 
   VITE_USE_MOCK && plugins.push(configMockPlugin(isBuild))
 

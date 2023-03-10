@@ -27,7 +27,7 @@
       "@/*": ["src/*"],
       "#/*": ["types/*"]
     },
-    "types": ["vite/client", "node", "ant-design-vue/typings/global"]
+    "types": ["vite/client", "node", "ant-design-vue/typings/global","vite-plugin-svg-icons/client"]
   },
   "include": [
     "tests/**/*.ts",

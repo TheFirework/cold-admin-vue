@@ -16,6 +16,7 @@ import { configCompressPlugin } from './compress'
 import { configVisualizer } from './visualizer'
 import { configStyleImportPlugin } from './styleImport'
 import { configUnoCssPlugin } from './unocss'
+import { configSvgIconsPlugin } from './svgIcons'
 
 export function createVitePlugins(viteEnv: ViteEnv, isBuild: boolean) {
   const { VITE_USE_MOCK } = viteEnv
@@ -29,7 +30,10 @@ export function createVitePlugins(viteEnv: ViteEnv, isBuild: boolean) {
     configUnoCssPlugin(),
     AutoImport({
       dts: 'types/auto-import.d.ts',
-      imports: ['vue', 'vue-router']
+      imports: ['vue', 'vue-router'],
+      eslintrc: {
+        enabled: true
+      }
     }),
     // 按需引入
     Components({
@@ -44,6 +48,8 @@ export function createVitePlugins(viteEnv: ViteEnv, isBuild: boolean) {
   ]
 
   plugins.push(configHtmlPlugin(viteEnv, isBuild))
+
+  plugins.push(configSvgIconsPlugin(isBuild))
 
   VITE_USE_MOCK && plugins.push(configMockPlugin(isBuild))
 

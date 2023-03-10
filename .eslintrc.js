@@ -9,7 +9,8 @@ module.exports = {
     'eslint-config-airbnb-base',
     'plugin:@typescript-eslint/recommended',
     'prettier',
-    'plugin:prettier/recommended'
+    'plugin:prettier/recommended',
+    './.eslintrc-auto-import.json'
   ],
   overrides: [],
   parser: 'vue-eslint-parser',

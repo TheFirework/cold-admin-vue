@@ -8,6 +8,10 @@
   <div class="color-green color-pink">UnoCss</div>
   <div class="color-green font-bold ml-3">UnoCss</div>
   <div class="card-shadow card"></div>
+
+  <i-carbon-accessibility />
+  <icon icon="material-symbols:adb" color="blue" />
+  <svg-icon name="6k-plus" color="red" />
 </template>
 
 <script setup lang="ts"></script>

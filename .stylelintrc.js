@@ -27,6 +27,7 @@ module.exports = {
         ignorePseudoClasses: ['deep']
       }
     ],
+    'no-empty-source': null,
     // 指定样式的排序
     'order/properties-order': [
       'position',

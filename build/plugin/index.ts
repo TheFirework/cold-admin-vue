@@ -3,8 +3,11 @@ import vue from '@vitejs/plugin-vue'
 import Components from 'unplugin-vue-components/vite'
 import { AntDesignVueResolver } from 'unplugin-vue-components/resolvers'
 import AutoImport from 'unplugin-auto-import/vite'
+import { configMockPlugin } from './mock'
 
 export function createVitePlugins(viteEnv: ViteEnv, isBuild: boolean) {
+  const { VITE_USE_MOCK } = viteEnv
+
   const plugins: (PluginOption | PluginOption[])[] = [
     vue(),
     AutoImport({
@@ -18,6 +21,8 @@ export function createVitePlugins(viteEnv: ViteEnv, isBuild: boolean) {
       resolvers: [AntDesignVueResolver({ importStyle: 'less', resolveIcons: true })]
     })
   ]
+
+  VITE_USE_MOCK && plugins.push(configMockPlugin(isBuild))
 
   return plugins
 }

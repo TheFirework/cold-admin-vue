@@ -9,11 +9,11 @@ export default ({ command, mode }: ConfigEnv): UserConfig => {
   const root = process.cwd()
   const env = loadEnv(mode, root)
   const viteEnv = wrapperEnv(env)
-  const { VITE_PORT, VITE_PUBLIC_PATH, VITE_PROXY } = viteEnv
+  const { VITE_PORT, VITE_APP_BASE_URL, VITE_PROXY } = viteEnv
 
   const isBuild = command === 'build'
   return {
-    base: VITE_PUBLIC_PATH || '/',
+    base: VITE_APP_BASE_URL || '/',
     resolve: {
       // 设置别名
       alias: {

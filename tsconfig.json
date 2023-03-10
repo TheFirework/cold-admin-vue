@@ -11,15 +11,23 @@
     "isolatedModules": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
+    "allowSyntheticDefaultImports": true,
+    "strictFunctionTypes": false,
     "lib": ["ESNext", "DOM"],
+    "noImplicitAny": false,
     "skipLibCheck": true,
     "noEmit": true,
+    "allowJs": true,
+    "sourceMap": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "experimentalDecorators": true,
+    "removeComments": true,
     "paths": {
       "@/*": ["src/*"],
       "#/*": ["types/*"]
     },
-    "types": ["vite/client", "node", "ant-design-vue/typings/global"],
-    "typeRoots": ["node_modules/@types/", "src/types"]
+    "types": ["vite/client", "node", "ant-design-vue/typings/global"]
   },
   "include": [
     "tests/**/*.ts",

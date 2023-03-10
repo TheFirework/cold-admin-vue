@@ -45,6 +45,9 @@ module.exports = {
         tsx: 'never'
       }
     ],
-    'import/no-extraneous-dependencies': ['error', { devDependencies: true }]
+    'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
+    'import/prefer-default-export': 'off',
+    'no-unused-expressions': 'off',
+    'no-useless-escape': 'off'
   }
 }

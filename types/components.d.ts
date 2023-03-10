@@ -5,18 +5,18 @@
 // Read more: https://github.com/vuejs/core/pull/3399
 import '@vue/runtime-core'
 
-export {};
+export {}
 
-declare module "@vue/runtime-core" {
+declare module '@vue/runtime-core' {
   export interface GlobalComponents {
-    AButton: typeof import("ant-design-vue/es")["Button"];
-    AConfigProvider: typeof import("ant-design-vue/es")["ConfigProvider"];
-    AppConfigProvider: typeof import("./../src/components/Application/src/AppConfigProvider.vue")["default"];
-    HelloWorld: typeof import("./../src/components/HelloWorld.vue")["default"];
-    Icon: typeof import("./../src/components/Icon/src/Icon.vue")["default"];
-    IconPicker: typeof import("./../src/components/Icon/src/IconPicker.vue")["default"];
-    RouterLink: typeof import("vue-router")["RouterLink"];
-    RouterView: typeof import("vue-router")["RouterView"];
-    SvgIcon: typeof import("./../src/components/Icon/src/SvgIcon.vue")["default"];
+    AButton: typeof import('ant-design-vue/es')['Button']
+    AConfigProvider: typeof import('ant-design-vue/es')['ConfigProvider']
+    AppConfigProvider: typeof import('./../src/components/Application/src/AppConfigProvider.vue')['default']
+    HelloWorld: typeof import('./../src/components/HelloWorld.vue')['default']
+    Icon: typeof import('./../src/components/Icon/src/Icon.vue')['default']
+    IconPicker: typeof import('./../src/components/Icon/src/IconPicker.vue')['default']
+    RouterLink: typeof import('vue-router')['RouterLink']
+    RouterView: typeof import('vue-router')['RouterView']
+    SvgIcon: typeof import('./../src/components/Icon/src/SvgIcon.vue')['default']
   }
 }

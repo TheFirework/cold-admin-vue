@@ -3,30 +3,30 @@
 </template>
 
 <script lang="ts" setup>
-import { unref } from "vue";
-import { useRouter } from "vue-router";
+import { unref } from 'vue'
+import { useRouter } from 'vue-router'
 
-const { currentRoute, replace } = useRouter();
+const { currentRoute, replace } = useRouter()
 
-const { params, query } = unref(currentRoute);
-const { path, redirectType = "path" } = params;
+const { params, query } = unref(currentRoute)
+const { path, redirectType = 'path' } = params
 
-Reflect.deleteProperty(params, "redirectType");
-Reflect.deleteProperty(params, "path");
+Reflect.deleteProperty(params, 'redirectType')
+Reflect.deleteProperty(params, 'path')
 
-const _path = Array.isArray(path) ? path.join("/") : path;
+const _path = Array.isArray(path) ? path.join('/') : path
 
-if (redirectType === "name") {
+if (redirectType === 'name') {
   replace({
     name: _path,
     query,
-    params,
-  });
+    params
+  })
 } else {
   replace({
-    path: _path.startsWith("/") ? _path : `/${_path}`,
-    query,
-  });
+    path: _path.startsWith('/') ? _path : `/${_path}`,
+    query
+  })
 }
 </script>
 

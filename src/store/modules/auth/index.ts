@@ -1,25 +1,25 @@
-import { defineStore } from "pinia";
+import { defineStore } from 'pinia'
 
 interface AuthState {
   /** 用户信息 */
-  userInfo: object;
+  userInfo: object
   /** 用户token */
-  token: string;
+  token: string
   /** 登录的加载状态 */
-  loginLoading: boolean;
+  loginLoading: boolean
 }
 
-export const useAuthStore = defineStore("auth-store", {
+export const useAuthStore = defineStore('auth-store', {
   state: (): AuthState => ({
     userInfo: {},
-    token: "",
-    loginLoading: false,
+    token: '',
+    loginLoading: false
   }),
   getters: {
     /** 是否登录 */
     isLogin(state) {
-      return Boolean(state.token);
-    },
+      return Boolean(state.token)
+    }
   },
   actions: {
     /**
@@ -28,12 +28,12 @@ export const useAuthStore = defineStore("auth-store", {
      * @param password - 密码
      */
     async login(userName: string, password: string) {
-      this.loginLoading = true;
+      this.loginLoading = true
       // const { data } = await fetchLogin(userName, password);
       // if (data) {
       //   await this.handleActionAfterLogin(data);
       // }
-      this.loginLoading = false;
-    },
-  },
-});
+      this.loginLoading = false
+    }
+  }
+})

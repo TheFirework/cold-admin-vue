@@ -6,17 +6,23 @@ module.exports = {
   extends: [
     'eslint:recommended',
     'plugin:vue/vue3-essential',
-    'airbnb',
+    'eslint-config-airbnb-base',
     'plugin:@typescript-eslint/recommended',
     'prettier',
     'plugin:prettier/recommended'
   ],
   overrides: [],
-  parser: '@typescript-eslint/parser',
+  parser: 'vue-eslint-parser',
+  // parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaVersion: 'latest',
+    parser: '@typescript-eslint/parser',
     sourceType: 'module'
   },
-  plugins: ['vue', '@typescript-eslint'],
-  rules: {}
+  plugins: ['vue', '@typescript-eslint', 'prettier'],
+  rules: {
+    'prettier/prettier': 'error',
+    "arrow-body-style": "off",
+    "prefer-arrow-callback": "off"
+  }
 }

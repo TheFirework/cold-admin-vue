@@ -12,3 +12,6 @@ stats.html
 *.woff
 *.ttf
 
+!.eslintrc.js
+!.cz-config.js
+!.stylelintrc.js

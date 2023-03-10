@@ -9,13 +9,13 @@ import OptimizationPersist from 'vite-plugin-optimize-persist'
 import PkgConfig from 'vite-plugin-package-config'
 import Icons from 'unplugin-icons/vite'
 import IconsResolver from 'unplugin-icons/resolver'
+import UnoCSS from 'unocss/vite'
 import { configMockPlugin } from './mock'
 import { configHtmlPlugin } from './html'
 import { configImageminPlugin } from './imagemin'
 import { configCompressPlugin } from './compress'
 import { configVisualizer } from './visualizer'
 import { configStyleImportPlugin } from './styleImport'
-import { configUnoCssPlugin } from './unocss'
 import { configSvgIconsPlugin } from './svgIcons'
 
 export function createVitePlugins(viteEnv: ViteEnv, isBuild: boolean) {
@@ -27,7 +27,7 @@ export function createVitePlugins(viteEnv: ViteEnv, isBuild: boolean) {
     vueSetupExtend(),
     PkgConfig(),
     OptimizationPersist(),
-    configUnoCssPlugin(),
+    UnoCSS(),
     AutoImport({
       dts: 'types/auto-import.d.ts',
       imports: ['vue', 'vue-router'],

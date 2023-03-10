@@ -1,5 +1,5 @@
 <template>
-  <div>Analysis</div>
+  <div class="flex-center">Analysis</div>
   <a-button type="primary">Primary Button</a-button>
   <a-button>Default Button</a-button>
   <a-button type="dashed">Dashed Button</a-button>

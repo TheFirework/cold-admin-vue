@@ -15,6 +15,7 @@ import { configImageminPlugin } from './imagemin'
 import { configCompressPlugin } from './compress'
 import { configVisualizer } from './visualizer'
 import { configStyleImportPlugin } from './styleImport'
+import { configUnoCssPlugin } from './unocss'
 
 export function createVitePlugins(viteEnv: ViteEnv, isBuild: boolean) {
   const { VITE_USE_MOCK } = viteEnv
@@ -25,6 +26,7 @@ export function createVitePlugins(viteEnv: ViteEnv, isBuild: boolean) {
     vueSetupExtend(),
     PkgConfig(),
     OptimizationPersist(),
+    configUnoCssPlugin(),
     AutoImport({
       dts: 'types/auto-import.d.ts',
       imports: ['vue', 'vue-router']

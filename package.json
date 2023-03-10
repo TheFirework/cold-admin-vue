@@ -34,6 +34,10 @@
     "@types/qs": "^6.9.7",
     "@typescript-eslint/eslint-plugin": "^5.54.1",
     "@typescript-eslint/parser": "^5.54.1",
+    "@unocss/preset-attributify": "^0.50.4",
+    "@unocss/preset-uno": "^0.50.4",
+    "@unocss/reset": "^0.50.4",
+    "@unocss/transformer-directives": "^0.50.4",
     "@vitejs/plugin-vue": "^4.0.0",
     "@vitejs/plugin-vue-jsx": "^3.0.0",
     "add": "^2.0.6",
@@ -64,6 +68,7 @@
     "stylelint-less": "^1.0.6",
     "stylelint-order": "^6.0.3",
     "typescript": "*",
+    "unocss": "^0.50.4",
     "unplugin-auto-import": "^0.15.1",
     "unplugin-icons": "^0.15.3",
     "unplugin-vue-components": "^0.24.1",
@@ -92,12 +97,12 @@
       "eslint --fix"
     ],
     "*.vue": [
-      "stylelint --fix",
+      "stylelint --fix --allow-empty-input",
       "prettier --write",
       "eslint --fix"
     ],
     "*.{html,css,less,scss,md}": [
-      "stylelint --fix",
+      "stylelint --fix --allow-empty-input",
       "prettier --write"
     ]
   }

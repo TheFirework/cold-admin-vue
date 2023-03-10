@@ -23,10 +23,12 @@ module.exports = {
       '@typescript-eslint/parser': ['.ts', '.tsx']
     },
     'import/resolver': {
-      typescript: {
-        alwaysTryTypes: true,
-        project: '/'
-      }
+      // typescript: {
+      //   alwaysTryTypes: true,
+      //   project: '/'
+      // }
+      typescript: true,
+      node: true
     }
   },
   plugins: ['vue', '@typescript-eslint', 'prettier', 'import'],
@@ -48,6 +50,8 @@ module.exports = {
     'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
     'import/prefer-default-export': 'off',
     'no-unused-expressions': 'off',
-    'no-useless-escape': 'off'
+    'no-useless-escape': 'off',
+    'vue/multi-word-component-names': 'off',
+    'import/no-unresolved': 'off'
   }
 }

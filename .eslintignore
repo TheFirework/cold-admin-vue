@@ -15,3 +15,4 @@ stats.html
 !.eslintrc.js
 !.cz-config.js
 !.stylelintrc.js
+!unocss.config.js

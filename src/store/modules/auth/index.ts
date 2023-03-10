@@ -28,6 +28,7 @@ export const useAuthStore = defineStore('auth-store', {
      * @param password - 密码
      */
     async login(userName: string, password: string) {
+      console.log(userName, password)
       this.loginLoading = true
       // const { data } = await fetchLogin(userName, password);
       // if (data) {

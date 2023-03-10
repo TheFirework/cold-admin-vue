@@ -6,6 +6,7 @@ import AutoImport from 'unplugin-auto-import/vite'
 import vueJsx from '@vitejs/plugin-vue-jsx'
 import { configMockPlugin } from './mock'
 import { configHtmlPlugin } from './html'
+import { configImageminPlugin } from './imagemin'
 
 export function createVitePlugins(viteEnv: ViteEnv, isBuild: boolean) {
   const { VITE_USE_MOCK } = viteEnv
@@ -28,6 +29,10 @@ export function createVitePlugins(viteEnv: ViteEnv, isBuild: boolean) {
   plugins.push(configHtmlPlugin(viteEnv, isBuild))
 
   VITE_USE_MOCK && plugins.push(configMockPlugin(isBuild))
+
+  if (isBuild) {
+    plugins.push(configImageminPlugin())
+  }
 
   return plugins
 }
